@@ -2,11 +2,11 @@
 // var stringifyJSON = JSON.stringify;
 
 // but you don't so you're going to write it from scratch:
+// check if it's an array or object
+// integers, booleans, undefined-> undefined, null -> "null", strings, function -> undefined (unless inside an array, then null)
+// keys are always strings in objects
 
 var stringifyJSON = function(obj) {
-  // check if it's an array or object
-  // integers, booleans, undefined-> undefined, null -> "null", strings, function -> undefined (unless inside an array, then null)
-  // keys are always strings in objects
  
   if (typeof obj === "boolean" || typeof obj === "number" || obj === null) {
     return "" + obj;

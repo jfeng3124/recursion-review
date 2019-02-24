@@ -12,10 +12,6 @@ var getElementsByClassName = function(className) {
       result.push(element);
     }
     if (element.childNodes) {
-      // for (var i = 0; i < element.childNodes.length; i++) {
-      //   hasClassName(element.childNodes[i]);
-      // }
-      
       element.childNodes.forEach(i => hasClassName(i));
     }
     
